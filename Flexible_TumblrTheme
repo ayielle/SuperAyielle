@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+    <head>
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="http://static.tumblr.com/oeix02r/r1on6zuhp/flexible.png">
+    <!-- THEME BY: MARIEL BALLADA of HTTP://SUPERAYIELLE.TUMBLR.COM --> 
+     
+    <!-- SCRIPTS -->
+    
+    <script src="http://static.tumblr.com/oeix02r/6HSn6883h/ohmaria_jquery.min.js"></script>
+    <script src="http://static.tumblr.com/oeix02r/j3Fn6882q/ohmaria_jquery.masonry.js"></script>
+    <script src="http://static.tumblr.com/oeix02r/wCkn6883r/ohmaria_modernizr.custom.js"></script>
+    <script src="http://static.tumblr.com/oeix02r/ZcMn688c2/ohmaria_scrolltotop.js"></script>
+    
+        {block:ifInfiniteScrolling}
+        <script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code" ></script>
+		{/block:ifInfiniteScrolling}
+	
+		<script>
+        // The speed of one transition (fadeIn or fadeOut).
+        // Full execution time will be:
+        // (browser navigation time) + speed * 2;
+        // You can set this to slow, medium, fast, or number of ms.
+        var speed = 'slow';
+
+        $('html, body').hide();
+        $(document).ready(function() {
+            $('html, body').fadeIn(speed, function() {
+            $('a[href], button[href]').click(function(event) {
+            var url = $(this).attr('href');
+            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+            event.preventDefault();
+            $('html, body').fadeOut(speed, function() {
+                window.location = url;
+            });
+            });
+        });
+        });
+        </script>
+		
+	<!-- SCRIPTS -->
+        
+    
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Sacramento|Sue+Ellen+Francisco|Grand+Hotel' rel='stylesheet' type='text/css'>
+    
+    <!--
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-family: 'Grand Hotel', cursive;
+    -->
+    
+    <!-- CUSTOM VARIABLES -->
+    <meta name="if:Show Title" content="1"/>
+    <meta name="if:Show Description" content="1"/>
+    <meta name="image:Background" content=""/>
+    <meta name="image:Logo" content="">
+    <meta name="if:Use Sidebar Menu" content="0"/>
+    <meta name="if:Infinite Scrolling" content="0"/>
+    <meta name="if:Wide Layout" content="1"/>
+    <meta name="if:Fullscreen Background" content="1"/>
+    <meta name="if:Background Fixed" content="1"/>
+    <meta name="if:Round Borders" content="0"/>
+    <meta name="if:Box Shadows" content="1"/>
+    <meta name="if:Use Theme Header Font" content="1"/>
+    <meta name="if:Use Theme Body Font" content="1"/>
+
+    
+    <meta name="font:Header Font" content="Sacramento"/>
+    <meta name="font:Body Font" content="Ubuntu Condensed"/>
+        
+    <meta name="color:Background Color" content="#d4d4d4"/>
+    <meta name="color:Header Title Color" content="#000000"/>
+    <meta name="color:Header Texts Color" content="#000000"/>
+    <meta name="color:Box Shadow Color" content="#e1e1e1"/>
+    <meta name="color:Posts Background Color" content="#ffffff"/>
+    <meta name="color:Post Texts Color" content="#000000"/>
+    <meta name="color:Links Color" content="#f31b67"/>
+    <meta name="color:Links Hover Color" content="#f31b67"/>
+    <meta name="color:Footer Background Color" content="#f3f3f3"/>
+    <meta name="color:Footer Text Color" content="#AAAAAA"/>
+    <meta name="color:Footer Link Color" content="#AAAAAA"/>
+    <meta name="color:Footer Link Hover Color" content="#CCCCCC"/>
+    <meta name="color:Sidebar Background Color" content="#212121"/>
+    
+    <meta name="text:Header Font Size" content="50px"/>
+    <meta name="text:Disqus Shortname" content=""/>
+    <meta name="text:Twitter Username" content=""/>
+    <!-- END OF CUSTOM VARIABLES -->
+    
+    <style>
+    body {	margin:0px;
+	        padding:0px;
+	        background-color:{color:Background Color};
+	        cursor:default;
+		    {block:ifBackgroundFixed}background-attachment: fixed;{/block:ifBackgroundFixed}
+		    {block:ifNotBackgroundFixed}background-attachment: no;{/block:ifNotBackgroundFixed}
+		    {block:ifBackgroundImage}background-image: url({image:Background});{/block:ifBackgroundImage}            
+            {block:ifNotBackgroundImage}background-image: url('http://static.tumblr.com/oeix02r/Tfxn6p1t4/superayielle_pink.png');{/block:ifNotBackgroundImage}
+            {block:ifFullscreenBackground}
+              background-position: center center; 
+              background-repeat:no-repeat;
+              background-attachment:fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            {/block:ifFullScreenbackground}
+         }
+
+
+
+    body {	font-family: {font:Body Font};	
+            {block:ifUseThemeBodyFont}font-family: Ubuntu Condensed;{/block:ifUseThemeBodyFont}
+            font-size:12.5px }
+
+    a {	color:{color:Links Color};	
+	    -webkit-transition: all .3s ease-out;   	 	
+	    -moz-transition: all .3s ease-out;
+	    -o-transition: all .3s ease-out;
+	    transition: all .3s ease-out;
+	    text-decoration:none}
+
+    a:hover {color:{color:Links Hover Color}}
+
+    /* HEADER CONTAINER */
+    
+    
+    {block:ifUseSidebarMenu}div#description_position {display:none}{/block:ifUseSidebarMenu}
+    div#description_position {position:fixed;width:100%;top:0px;}
+    div#description {
+	height:0px;
+	width:100%;
+	padding:0px;
+	overflow:hidden;
+	background-color:#383838;
+	transition:0.7s height, 0.7s padding, 0s visibility 0.7s;
+	/*transition:0.4s height, 0.4s padding;*/
+
+	}
+
+    div#description.hidden {
+    color:#ffffff;
+	height:100%;
+	padding:40px 0px 40px 0px;
+	background-color:#383838;
+	transition:0.7s height, 0.7s padding, 0s visibility 0.7s;
+	}
+
+
+    #toggle {	cursor:pointer;
+		width:100px;
+		color:#ffffff;
+		font-size:30px;
+		text-transform:uppercase;
+		padding:0px 10px 0px 10px ;margin:140px 0px 0px 0px;margin-left:80%;
+		background-color:#000000;
+		border-radius:0px 0px 10px 10px;
+		
+	}
+	
+	
+	#toggle:hover {background-color:#ffffff;color:#000000;}
+	
+	img.Portrait {border-radius:50em}
+	
+	
+#toggle_menu ul {	list-style-type: none;
+			margin:0px;margin-top:20px;
+			padding:0px;line-height:normal;}
+
+    #toggle_menu ul li {	display:inline;
+			                text-transform:uppercase;}
+	#toggle_menu ul li.first {border-left:1px solid #d4d4d4;}		                
+			                
+    #toggle_menu ul li a {
+
+                            border-right:1px solid #d4d4d4;
+                            display:inline;
+                            color: #f03577;margin-bottom:10px;
+                            padding:0px 10px 0px 10px;;
+    }
+
+    #toggle_menu ul li a:hover {
+
+    color: #ffffff;
+    background:{color:Links Color};
+    }
+	
+    /* END OF HEADER CONTAINER */
+    
+    /* SIDEBAR */
+    #sidebar {  position:fixed;
+                top:0px;
+                left:0px;
+                width:200px;
+                height:100%;
+                padding:20px;
+                padding-top:100px;
+                background-color:{color:Sidebar Background Color};
+    }
+    #sidebar h1 {   font-family: {font:Header Font};
+                    font-size: 30px;
+                    {block:ifUseThemeHeaderFont}font-family: Sacramento;{/block:ifUseThemeHeaderFont}
+		            padding:0px; 
+		            margin:0px; }
+		            
+	div#header_desc_sidebar {margin-bottom:10px; color:#ffffff;}
+	
+	#sidebar_menu ul {	list-style-type: none;
+			margin:0px;margin-top:20px;
+			padding:0px;line-height:normal;}
+
+    #sidebar_menu ul li {	display:block;
+			                text-transform:uppercase;
+                            padding:5px;
+    }
+	             
+		                
+    #sidebar_menu ul li a {
+
+                            
+                            display:inline;
+                            color: #f03577;margin-bottom:10px;
+                            padding:0px 10px 0px 10px;;
+    }
+
+    #sidebar_menu ul li a:hover, #sidebar_menu ul li:hover {
+
+    color: #ffffff;
+    background:{color:Links Color};
+    }
+	
+    
+    /* END OF SIDEBAR */
+    
+    
+    /* HEADER IMAGE */
+    #header_image {margin-top:50px;margin-bottom:20px;};
+    #header_image img {height:200px;width:50%;};
+
+
+    /* HEADER */
+    
+    div#header {	width:100%;
+		            height:150px;
+		            margin-top:50px; 
+		            padding-top:500px; 
+		                         }
+                
+    div#header h1 {	
+                    font-family: {font:Header Font};
+                    {block:ifUseThemeHeaderFont}font-family: Sacramento;{/block:ifUseThemeHeaderFont}
+		            {block:ifHeaderFontSize}font-size: {text:Header Font Size};{/block:IfHeaderFontSize}
+		            padding:0px;
+		            margin:0px;
+		            {block:IfNotLogoImage}margin-top:100px;{/block:IfNotLogoImage}}
+    
+    div#header h1 a {color:{color:Header Title Color};}
+
+    div#header_menu {	overflow:hidden;
+			            height:0px;
+			            transition: all .25s ease-in-out;
+		                -moz-transition: all .25s ease-in-out;
+			            -o-transition: all .25s ease-in-out;
+			            -ms-transition: all .25s ease-in-out;
+		                -webkit-transition: all .25s ease-in-out;
+			            padding:0px;
+			            margin:0px 0px 10px 0px; }
+
+    div#header:hover #header_menu {	display:block;
+				                    height:60px }
+				                    
+    div#header_desc {margin-bottom:70px; color:{color:Header Texts Color};}
+
+    /* END OF HEADER */
+
+
+    /* HEADER MENU */
+    #header_menu ul {	list-style-type: none;
+			margin:0px;margin-top:30px;
+			padding:0px }
+
+    #header_menu ul li {	display:inline;
+			                padding:10px;
+			                text-transform:uppercase; }
+    #header_menu ul li a {
+
+                            background:#fff;
+                            display:inline;
+                            color: #f03577;
+                            padding:10px 10px 10px 10px;
+                            
+                            -webkit-box-shadow: 0px 0px 4px 1px #E6E6E6;
+                            -moz-box-shadow: 0px 0px 4px 1px #E6E6E6;
+                            box-shadow: 0px 0px 4px 1px #E6E6E6;
+    }
+
+    #header_menu ul li a:hover {
+
+    color: #000000;
+    background:{color:Links Color};
+    }
+
+    /* END OF HEADER MENU */
+
+
+    /* MAIN CONTENT CONTAINER */
+
+    div#container { width:700px;padding:50px;}
+
+    div#entry {	color:{color:Post Texts Color};
+		        background-color:{color:Posts Background Color};
+                font-family: {font:Body Font};
+                {block:ifUseThemeBodyFont}font-family: Ubuntu Condensed;{/block:ifUseThemeBodyFont}
+    	        {block:ifWideLayout}width:700px;{/block:ifWideLayout}
+    	        {block:ifNotWideLayout}width:500px;{/block:ifNotWideLayout}
+				{block:ifRoundBorders}border-radius:3em;{/block:ifRoundBorders}
+				
+				text-align:justify;
+		        padding:50px;
+		        
+		        {block:ifNotUseSidebarMenu}margin-bottom:60px;{block:ifNotUseSidebarMenu}
+		        {block:ifUseSidebarMenu}
+		        margin-top:80px;
+		        {/block:ifUseSidebarMenu}
+		        font-size:110%;
+		        
+		        {block:ifBoxShadows}
+		        -webkit-box-shadow: 0px 0px 15px 1px {color:Box Shadow Color};
+		        -moz-box-shadow: 0px 0px 15px 1px {color:Box Shadow Color};
+		        box-shadow: 0px 0px 15px 1px {color:Box Shadow Color};
+                {/block:ifBoxShadows}
+    }
+		
+		        
+	#entry h1 {font-size:100%;}	
+    #entry img {    width:100%};
+    
+  	.like_and_reblog_buttons {
+                border: 1px solid #e8e8e8;
+                border-radius: 3px;
+                list-style-type: none;
+            }
+
+    .like_and_reblog_buttons li {
+                float: left;
+                margin: 0;
+                padding: 0px 0px 0px 20px;
+                height: 30px; 
+                
+            }
+
+    .like_and_reblog_buttons li:first-child {
+                border-right: 0px solid #e8e8e8;
+            }
+			
+    #entry a {color:#f31b67;}
+    #entry a:hover {color:#b38495;}
+
+    #entry #notes li a {	color:#cccccc;
+			                text-decoration:none;
+			 }
+
+    #entry #notes a:hover {	color:#f31b67;
+			                text-decoration:none; }
+
+    #entry #notes {	height:20px; 
+                    text-align:center;	
+                    width:100%; 
+                    color:#cccccc; font-size:70%;	}
+
+
+    #enter #notes ul { margin:0px;padding:0px;	}
+    #entry #notes li { list-style:none;}
+
+    div#notes a {color:#CCCCCC;}
+    
+    h1#quote {font-family: 'Grand Hotel', cursive;font-size:200%;color:{color:Links Color}}
+    div.source {font-size:60%;}    
+
+    #tags {	font-size:11px;
+	        text-transform:uppercase;
+	        margin-top:30px;}
+
+    #tags a {	background-color:#e1e1e1;
+		        color:#888888;
+		        padding:2px }
+
+    #tags a:hover { background-color:transparent;
+		            color:#000000 }
+
+    #prevnext a {color:#f096b8;text-decoration:none}
+    #prevnext a:hover {color:#ed1d6b}
+    #previous_post  {font-size:70px;text-align:left;}
+    #next_post {font-size:70px;text-align:right}
+
+    #middle {font-size:80px}
+
+
+    a.tumblr_blog {text-transform:uppercase;font-size:80%;}
+    span#short_url {padding:10px;border:1px dashed #cccccc;color:#cccccc;font-size:70%;}
+    
+    ul.chat {list-style-type: none;}
+    ul.chat li {padding:10px;}
+    li.odd {background-color:#e1e1e1;}
+    li.even {background-color:#cccccc;}
+    .label {font-weight:bold;text-transform:uppercase;}
+    
+    #entry .title {text-transform:uppercase; font-size: 150%;}
+
+    /* END OF SINGLE POST */
+
+
+    /* LINK */
+    #link {background-color:#f1f1f1;height:80px;padding:20px};
+    td#linkbox {text-transform:uppercase}
+    td#linkbox h1 a {color:#9d9b9b;text-transform:uppercase;font-size:150%;}
+    td#linkbox h1 a:hover {color:{color:Links Color};}
+    
+    /* POST NOTES */
+    ol.notes {background-color:#e9e9e9;height:100px;overflow:auto;padding:10px;}
+    ol.notes img { display:none; }
+    ol.notes li {list-style-type: none;font-size:8pt;}
+    ol.notes li img { display:none; }
+    
+    #post_tags {text-transform:uppercase;font-size:8pt;width:400px;}
+    #post_tags a {padding-right:10px;}
+
+
+    /* FOOTER */
+    {block:ifUseSidebarMenu}#footer {display:none}{/block:ifUseSidebarMenu}
+    #footer {   padding:50px;
+                height:100px;
+                padding-top:80px;
+                text-align:center;
+                background-color:{color:Footer Background Color};
+                color:{color:Footer Text Color};	}
+                
+    #footer a {color:{color:Footer Link Color};}
+    #footer a:hover {color:{color:Footer Link Hover Color};}
+    /* END OF FOOTER */
+
+    /* BACK TO TOP */
+
+    #back-top {
+	position:fixed;
+	right:50px;
+	bottom:250px;
+	width: 56px;
+	height:56px;
+	display:block;
+    }
+
+    #back-top a {
+	width: 54px;
+	height:56px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+    }
+    #back-top a:hover {
+	color: #000;
+    }
+    /* arrow icon (span tag) */
+    #back-top span {
+	width: 54px;
+	height: 56px;
+	display: block;
+	margin-bottom: 5px;
+	background: #888888 url(http://static.tumblr.com/oeix02r/8zEn69mkp/ohmaria_top.png) no-repeat center center;
+	/* rounded corners */
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+    }
+    #back-top a:hover span {
+	background-color: #bbbbbb;
+    }
+    
+    
+    /* PAGENATION */
+    div#jump_page { width:500px;padding:20px 40px 20px 40px;margin:10px;font-size:20px;}
+    div#jump_page a {background-color:#ffffff;padding:10px;margin-right:10px;width:50px;color:#cccccc;}
+    div#jump_page a:hover {background-color:#cccccc;color:#ffffff;padding:10px;margin-right:10px;width:50px;}
+    div#jump_page .current_page {background-color:{color:Links Color};padding:10px;margin-right:10px;width:50px;color:#ffffff;}
+    
+    .install_button{display:block;} 
+    
+    #post_icons {position:relative;float:right;top:-20px;right:-40px;font-size:30px;opacity:.3}
+    #entry #post_icons img.post_icons {width:50px}
+    span.post_type {text-transform:uppercase;}
+    
+    
+    /* SHARE BUTTONS */
+    
+    div#sharebuttons {	overflow:hidden;
+			            height:0px;
+			            transition: all .25s ease-in-out;
+		                -moz-transition: all .25s ease-in-out;
+			            -o-transition: all .25s ease-in-out;
+			            -ms-transition: all .25s ease-in-out;
+		                -webkit-transition: all .25s ease-in-out;
+			            padding:0px;
+			            margin:0px 0px 10px 0px; }
+			            
+	div#sharebuttons a {cursor:pointer;opacity:.6;}
+	div#sharebuttons a:hover {opacity:1;}
+
+    li#share_it:hover #sharebuttons {	display:block;height:90px;
+				                    }
+				                    
+ div#sharebuttons_permalink img {width:auto};
+        
+    </style>
+    
+    
+    
+    <!-- END OF STYLESHEET -->
+    
+    <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script 
+
+type="text/javascript">stLight.options({publisher:'9640795e-23e6-4b84-ad9a-4708f5532acb'});</script>
+
+    </head>
+    
+    
+    <body>
+    
+    <div id="description_position">
+        <div id="description"> <center>
+        <table width="700" cellspacing="20">
+        <tr>
+        <td valign="middle" width="50%"><div align="right">{block:ShowAvatar}<img src="{PortraitURL-128}" class="Portrait">{/block:ShowAvatar}</div></td>
+        <td valign="middle" width="50%"><div align="left">I'm {Title}. Welcome!</div><div id="toggle_menu">
+            <ul>
+	         <li class="first"><a href="/">Home</a></li>
+	         {block:HasPages}{block:Pages}
+	         <li><a href="{URL}">{Label}</a></li>
+	         {/block:Pages}{/block:HasPages} 
+	         <li><a href="/ask">Ask Me!</a></li>
+	         <li><a href="/archive">Archive</a></li>
+	         <li><a href="/rss">Rss</a></li>
+	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
+	         </ul></div></td>
+        </tr>    
+        </table>    
+        </center></div>
+        <span id="toggle" onclick="$('#description').toggleClass('hidden');"> &#8645; </span>
+    </div>
+    
+
+    <div id="header" {block:ifUseSidebarMenu}style="display:none"{/block:ifUseSidebarMenu}>
+        <center>
+            {block:IfLogoImage}
+            <a href="/">
+                <img src="{image:Logo}" class="logo" border="0">
+            </a>
+            {/block:IfLogoImage}
+            {block:ifShowTitle} <h1><a href="/">{Title}</a></h1>{/block:ifShowTitle}         
+        
+            <div id="header_menu">
+    
+	         <ul>
+	         <li><a href="/">Home</a></li>
+	         {block:HasPages}{block:Pages}
+	         <li><a href="{URL}">{Label}</a></li>
+	         {/block:Pages}{/block:HasPages} 
+	         <li><a href="/ask">Ask Me!</a></li>
+	         <li><a href="/archive">Archive</a></li>
+	         <li><a href="/rss">Rss</a></li>
+	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
+	         
+	         </ul>
+
+            </div>
+            <br>
+            <div id="header_desc">
+            {block:IfShowDescription}
+            {Description}
+            {/block:IfShowDescription}
+            </div>
+            </center>
+       
+    </div> 
+
+
+{block:ifUseSidebarMenu}
+    <div id="sidebar">
+        <center>
+        <div>{block:ShowAvatar}<img src="{PortraitURL-128}" class="Portrait">{/block:ShowAvatar}</div>
+        {block:ifShowTitle} <h1><a href="/">{Title}</a></h1>{/block:ifShowTitle}
+        <div id="header_desc_sidebar">
+            {block:IfShowDescription}
+            {Description}
+            {/block:IfShowDescription}
+            </div>
+        <div id="sidebar_menu">
+            <ul>
+	         <li class="first"><a href="/">Home</a></li>
+	         {block:HasPages}{block:Pages}
+	         <li><a href="{URL}">{Label}</a></li>
+	         {/block:Pages}{/block:HasPages} 
+	         <li><a href="/ask">Ask Me!</a></li>
+	         <li><a href="/archive">Archive</a></li>
+	         <li><a href="/rss">Rss</a></li>
+	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
+	         </ul></div>
+        </center>
+        
+        <div style="font-size:7pt;margin-top:10px;opacity:.5;"><center>
+            &copy; {CopyrightYears} <a href="/">{Title}</a> | Theme by <a href="http://superayielle.tumblr.com" target="_blank">Super Ayielle</a></center>
+        </div>
+    </div>
+
+    <div style="margin-left:15%">
+    {/block:ifUseSidebarMenu}
+
+
+    
+    <center>
+
+    
+            {block:Posts}
+            
+            <div class = "autopagerize_page_element" >
+            <div id="entry">
+            
+            
+            
+            
+                {block:Text}
+                
+                        {block:Title}
+                        <center><h1 class="title"><a href="{Permalink}">{Title}</a></h1></center>
+                        {/block:Title}{Body}
+                       
+                {/block:Text}
+    
+                {block:Photo}
+
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                            {block:LinkURL}
+                            <br>{LinkOpenTag}{LinkCloseTag}
+                            <a href="{LinkURL}">SOURCE</a>
+                            {/block:LinkURL}
+                        {/block:Caption}
+                 {/block:Photo}
+  
+                {block:Panorama}
+                
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                {/block:Panorama}
+  
+                {block:Photoset}
+                
+                        {Photoset}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                {/block:Photoset}
+ 
+                {block:Quote}
+                    
+                        <center><h1 id="quote">"{Quote}"</h1>
+
+                        {block:Source}
+                            <div class="source" align="right">- {Source}</div>
+                        {/block:Source}
+                        </center>
+                {/block:Quote}
+ 
+                {block:Link}
+                
+                        <center>
+                        <table cellpadding="" cellspacing="10" width="100%" bgcolor="#ebebeb">
+                        <td valign="middle" halign="center" width="80%" id="linkbox"><h1><center><a href="{URL}" class="link" {Target}>{block:Host}{Name} &#8594;
+
+{/block:Host}</a><br><font size="1">{Host}</font></h1></center></td>    
+                       
+                        </table>
+                        
+                            {block:Description}
+                            <div class="description" align="center">{Description}</div>
+                            {/block:Description}
+ 
+                {/block:Link}
+ 
+                {block:Chat}
+                
+                        {block:Title}
+                            <center><h3 class="title"><a href="{Permalink}">{Title}</a></h3></center>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+
+                {/block:Chat}
+
+                {block:Video}
+                
+                        <center>
+                            {block:ifWideLayout}{Video-700}{/block:IfWideLayout}
+                            {block:ifNotWideLayout}{Video-500}{/block:IfNotWideLayout}
+                            {block:Caption}
+                            <div class="caption"><h1>{Caption}</h1></div>
+                        {/block:Caption}</center>
+
+                {/block:Video}
+ 
+                {block:Audio}
+                
+                        {AudioPlayer}{block:Caption}
+                            <div class="caption"><h1>{Caption}</h1></div>
+                        {/block:Caption}
+
+                {/block:Audio}
+                
+                {block:More}<br><br><center><a href="{Permalink}"><span style="width:100px;height:100px;background-color:#f1f1f1;padding:10px">READ 
+
+MORE</span></a></center><br>{/block:More}
+                
+                <div id="notes">
+                
+                    <ul class="like_and_reblog_buttons">
+                    <li>{LikeButton}</li>
+                    <li>{ReblogButton}</li>
+                    <li id="share_it"><a href=""><img src="http://static.tumblr.com/oeix02r/fpMn8c4bi/share-512.png" border="0" width="20"></a>
+<div id="sharebuttons" style="width:20px">
+<a href="{Permalink}"><img src="http://static.tumblr.com/oeix02r/0XGn8ca5v/permalink.png" border="0" alt="Permalink"></a>
+<a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={Permalink}&text={Title}', 'popup', 'width=500,height=300'); return 
+
+false"><img src="http://static.tumblr.com/oeix02r/napn8c83z/fb.png" border="0" alt="Share in Facebook"></a><br>
+<a href="mailto:?subject={Title}&body=Check out this post! {Permalink}"><img src="http://static.tumblr.com/oeix02r/0bun8c843/mail.png" border="0" alt="Share via 
+
+E-mail"></a><br>
+<a target="popup" onclick="window.open('https://twitter.com/intent/tweet?original_referer={BlogURL}&text={Title}&url={ShortURL}&via={text:Twitter Username}', 
+
+'popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/D4Zn8c845/twitter.png" border="0" alt="Share in Twitter"></a>
+</div>
+                    </li>
+                    </ul>
+                    
+                    <div style="float:right;margin-right:50px"> {block:Date}{TimeAgo} - {ShortMonth} {DayOfMonth}, {Year}{/block:Date} - <a href="{Permalink}">
+
+{NoteCount} Notes</a> - <span class="post_type">{PostType}</span></div>
+                </div>
+
+{block:Permalink}
+                
+                
+                                
+                               <br><br><center>
+                               {block:HasTags} <div id="post_tags">{block:Tags}<a href="{TagURL}">#{Tag} </a> {/block:Tags}</div>{/block:HasTags}<br>
+                               
+                               <span id="short_url"><b>SHORT URL</b>: {ShortURL}</span><br><br>
+                               <div id="sharebuttons_permalink"><b>SHARE THIS PAGE!</b><br>
+<!-- AddToAny BEGIN -->
+<br/><a class='a2a_dd' href='http://www.addtoany.com/share_save'><img alt='Share/Bookmark' border='0' 
+
+src='http://static.addtoany.com/buttons/share_save_171_16.png' width='171' height='16'/></a><p class='a2a_linkname_escape' style='display:none'>{Title}</p><script 
+
+type='text/javascript'>var a2a_config = a2a_config || {};a2a_config.linkname_escape=1;a2a_config.linkurl="{Permalink}";</script><script 
+
+src='http://static.addtoany.com/menu/page.js' type='text/javascript'></script>
+<!-- AddToAny END -->
+</div><br>
+
+                </center>
+                {block:PostNotes}
+                {block:NoteCount} 
+                {PostNotes-16}
+                {/block:NoteCount}
+                <br>
+                {/block:PostNotes}
+
+
+{block:ifDisqusShortname}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace <example> with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script type="text/javascript">
+    var disqus_shortname = '{text:Disqus Shortname}';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+{/block:ifDisqusShortname}
+{/block:Permalink}
+
+                </div> <!-- END OF ENTRY -->
+                
+                {block:PermalinkPagination} 
+                <div id="jump_page">
+                {block:PreviousPost}
+                <a href="{PreviousPost}">&#8592;</a>
+                {/block:PreviousPost}
+     
+                {block:NextPost}
+                <a href="{NextPost}">&#8594;</a>
+                {/block:NextPost} 
+                </div>{/block:PermalinkPagination}
+                
+                </div>
+                {/block:Posts} 
+                
+                
+                               
+                                 
+                {block:ifnotInfiniteScrolling}
+                <div>
+                <center><div id="jump_page">
+                {block:Pagination}{block:PreviousPage}
+                <a href="{PreviousPage}">&#8592;</a>
+                {/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
+                <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                <a href="{NextPage}">&#8594;</a>
+                {/block:NextPage}{/block:Pagination}
+                </div>
+                {/block:ifnotInfiniteScrolling}
+        </center>
+        </div>
+    
+       <!-- END OF CONTAINER -->     
+        </center>
+        
+
+<div id="footer" align="center"> &copy; {CopyrightYears} <a href="/">{Title}</a> | Theme by <a href="http://superayielle.tumblr.com" target="_blank">Super 
+
+Ayielle</a></div>
+    
+<div id="back-top"><a href="#top"><span></span></a></div>      
+
+    
+  
+</body>
+</html>
