@@ -54,7 +54,7 @@
     <meta name="if:Show Title" content="1"/>
     <meta name="if:Show Description" content="1"/>
     <meta name="image:Background" content=""/>
-    <meta name="image:Logo" content="">
+    <meta name="image:Header" content="">
     <meta name="if:Use Sidebar Menu" content="0"/>
     <meta name="if:Infinite Scrolling" content="0"/>
     <meta name="if:Wide Layout" content="1"/>
@@ -552,7 +552,6 @@ type="text/javascript">stLight.options({publisher:'9640795e-23e6-4b84-ad9a-4708f
 	         <li><a href="/ask">Ask Me!</a></li>
 	         <li><a href="/archive">Archive</a></li>
 	         <li><a href="/rss">Rss</a></li>
-	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
 	         </ul></div></td>
         </tr>    
         </table>    
@@ -563,13 +562,15 @@ type="text/javascript">stLight.options({publisher:'9640795e-23e6-4b84-ad9a-4708f
 
     <div id="header" {block:ifUseSidebarMenu}style="display:none"{/block:ifUseSidebarMenu}>
         <center>
-            {block:IfLogoImage}
-            <a href="/">
-                <img src="{image:Logo}" class="logo" border="0">
-            </a>
-            {/block:IfLogoImage}
-            {block:ifShowTitle} <h1><a href="/">{Title}</a></h1>{/block:ifShowTitle}         
         
+            
+            {block:IfHeaderImage}
+                 <a href="/">
+                <img src="{image:Header}" class="logo" border="0">
+            </a><br>
+            {/block:IfHeaderImage}
+            {block:ifShowTitle}<h1><a href="/">{Title}</a></h1>{/block:ifShowTitle}         
+            {block:ShowAvatar}<img src="{PortraitURL-128}" class="Portrait">{/block:ShowAvatar}
             <div id="header_menu">
     
 	         <ul>
@@ -580,7 +581,6 @@ type="text/javascript">stLight.options({publisher:'9640795e-23e6-4b84-ad9a-4708f
 	         <li><a href="/ask">Ask Me!</a></li>
 	         <li><a href="/archive">Archive</a></li>
 	         <li><a href="/rss">Rss</a></li>
-	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
 	         
 	         </ul>
 
@@ -615,7 +615,6 @@ type="text/javascript">stLight.options({publisher:'9640795e-23e6-4b84-ad9a-4708f
 	         <li><a href="/ask">Ask Me!</a></li>
 	         <li><a href="/archive">Archive</a></li>
 	         <li><a href="/rss">Rss</a></li>
-	         <li><a href="http://superayielle.tumblr.com/post/88935756576/flexible-theme-by-super-ayielle" target="_blank">THEME</a></li>
 	         </ul></div>
         </center>
         
