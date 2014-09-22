@@ -8,16 +8,50 @@
 <!--
 //// TEMPLATE BY: SUPER AYIELLE - http://superayielle.tumblr.com ////
 -->
-
+ 
 {block:Hidden}
 <!-- CUSTOM VARIABLES -->
     <meta name="color:Hover Color" content="{AccentColor}"/>
     <meta name="image:Background" content=""/>
-    <meta name="if:Fullscreen Background" content="1"/>
     <meta name="if:Background Fixed" content="1"/>
-    <meta name="font:Body Font" content="Rosario" title="Rosario"/>
+    <meta name="if:Manual Load Infinite Scroll" content="1"/>
     <meta name="text:Disqus Shortname" content=""/>
     <meta name="text:Google analytics ID" content="">
+    
+    <meta name="select:Body font" content="Alef" title="Alef">
+    <meta name="select:Body font" content="Alegreya Sans" title="Alegreya Sans">
+    <meta name="select:Body font" content="Andika" title="Andika">
+    <meta name="select:Body font" content="Basic" title="Basic">
+    <meta name="select:Body font" content="Bree Serif" title="Bree Serif">
+    <meta name="select:Body font" content="Cabin" title="Cabin">
+    <meta name="select:Body font" content="Capriola" title="Capriola">
+    <meta name="select:Body font" content="Convergence" title="Convergence">
+    <meta name="select:Body font" content="Duru Sans" title="Duru Sans">
+    <meta name="select:Body font" content="Magra" title="Magra">
+    <meta name="select:Body font" content="Mako" title="Mako">
+    <meta name="select:Body font" content="Orienta" title="Orienta">
+    <meta name="select:Body font" content="Quattrocento Sans" title="Quattrocento Sans">
+    <meta name="select:Body font" content="Ropa Sans" title="Ropa Sans">
+    <meta name="select:Body font" content="Rosario" title="Rosario">
+    <meta name="select:Body font" content="Scada" title="Scada">
+    <meta name="select:Body font" content="Tauri" title="Tauri">
+    <meta name="select:Body font" content="Ubuntu Condensed" title="Ubuntu Condensed">
+    <meta name="select:Body font" content="Vidaloka" title="Vidaloka">
+    <meta name="select:Header font" content="Abril Fatface" title="Abril Fatface">
+    <meta name="select:Header font" content="Delius Swash Caps" title="Delius Swash Caps">
+    <meta name="select:Header font" content="Gloria Hallelujah" title="Gloria Hallelujah">
+    <meta name="select:Header font" content="Kavoon" title="Kavoon">
+    <meta name="select:Header font" content="Lilita One" title="Lilita One">
+    <meta name="select:Header font" content="Lily Script One" title="Lily Script One">
+    <meta name="select:Header font" content="Limelight" title="Limelight">
+    <meta name="select:Header font" content="Lobster Two" title="Lobster Two">
+    <meta name="select:Header font" content="Meddon" title="Meddon">
+    <meta name="select:Header font" content="Merienda One" title="Merienda One">
+    <meta name="select:Header font" content="Miltonian Tattoo" title="Miltonian Tattoo">
+    <meta name="select:Header font" content="Rammetto One" title="Rammetto One">
+    <meta name="select:Header font" content="Salsa" title="Salsa">
+    <meta name="select:Header font" content="Sancreek" title="Sancreek">
+    <meta name="select:Header font" content="Special Elite" title="Special Elite">
 <!-- EOF CUSTOM VARIABLES -->
 {/block:Hidden}
 <!-- STYLES -->
@@ -25,56 +59,58 @@
 {block:Hidden}
 <!--
 Body Fonts:
-font-family: 'Orienta', sans-serif;
-font-family: 'Mako', sans-serif;
-font-family: 'Overlock', cursive;
-font-family: 'Tauri', sans-serif;
-font-family: 'Cabin', sans-serif;
-font-family: 'Andika', sans-serif;
-font-family: 'Cabin Sketch', cursive;
-font-family: 'Duru Sans', sans-serif;
-font-family: 'Ropa Sans', sans-serif;
-font-family: 'Magra', sans-serif;
-font-family: 'Convergence', sans-serif;
-font-family: 'Alegreya Sans', sans-serif;
-font-family: 'Ubuntu Condensed', sans-serif;
-font-family: 'Basic', sans-serif;
-font-family: 'Quattrocento Sans', sans-serif;
-font-family: 'Scada', sans-serif;
-font-family: 'Rosario', sans-serif;
 font-family: 'Alef', sans-serif;
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Andika', sans-serif;
+font-family: 'Basic', sans-serif;
+font-family: 'Cabin', sans-serif;
 font-family: 'Capriola', sans-serif;
+font-family: 'Convergence', sans-serif;
+font-family: 'Duru Sans', sans-serif;
+font-family: 'Magra', sans-serif;
+font-family: 'Mako', sans-serif;
+font-family: 'Orienta', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Ropa Sans', sans-serif;
+font-family: 'Rosario', sans-serif;
+font-family: 'Scada', sans-serif;
+font-family: 'Tauri', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Bree Serif', serif;
+font-family: 'Vidaloka', serif;
+
+font-family: 'Cabin Sketch', cursive;
 font-family: 'Happy Monkey', cursive;
 font-family: 'Share', cursive;
+font-family: 'Overlock', cursive;
 
 Title Fonts:
-font-family: 'Lily Script One', cursive;
-font-family: 'Gloria Hallelujah', cursive;
-font-family: 'Merienda One', cursive;
-font-family: 'Bree Serif', serif;
-font-family: 'Special Elite', cursive;
-font-family: 'Vidaloka', serif;
-font-family: 'Sancreek', cursive;
-font-family: 'Salsa', cursive;
-font-family: 'Meddon', cursive;
-font-family: 'Delius Swash Caps', cursive;
 font-family: 'Abril Fatface', cursive;
-font-family: 'Orienta', sans-serif;
-font-family: 'Lilita One', cursive;
-font-family: 'Rammetto One', cursive;
-font-family: 'Limelight', cursive;
+font-family: 'Delius Swash Caps', cursive;
+font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Kavoon', cursive;
-font-family: 'Scada', sans-serif;
+font-family: 'Lilita One', cursive;
+font-family: 'Lily Script One', cursive;
+font-family: 'Limelight', cursive;
 font-family: 'Lobster Two', cursive;
+font-family: 'Meddon', cursive;
+font-family: 'Merienda One', cursive;
 font-family: 'Miltonian Tattoo', cursive;
+font-family: 'Rammetto One', cursive;
+font-family: 'Salsa', cursive;
+font-family: 'Sancreek', cursive;
+font-family: 'Special Elite', cursive;
 -->
 {/block:Hidden}
 
+<link href='http://fonts.googleapis.com/css?family={select:Body Font}' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family={select:Header Font}' rel='stylesheet' type='text/css'>
+
 <link rel="shortcut icon" href="{PortraitURL-128}">
 <link rel="alternate" type="application/rss+xml" href="{BlogUrl}rss">
+<link rel="stylesheet" href="http://static.tumblr.com/oeix02r/KdQnca0ts/main.css">
 
-<link rel="stylesheet" href="http://static.tumblr.com/oeix02r/uilnc2sjj/fonts.css">
-<link rel="stylesheet" href="http://static.tumblr.com/oeix02r/ioDnc3dfd/main.css">
+
 
 <style>
 body 	{
@@ -86,11 +122,11 @@ body 	{
         cursor:default;
         padding:0px;
         margin:0px;
-        font-family:{font:Body Font};
+        font-family:{select:Body font}, sans-serif;
         font-size:100%;
 }
 
-h1, h2, h3, h4, h5 {font-family:'Special Elite';}
+h1, h2, h3, h4, h5 {font-family:{select:Header font}, cursive;}
 	 
 a   {   color: {AccentColor};
         text-decoration: none;
@@ -119,12 +155,20 @@ a.more_notes_link { padding:10px; background-color:{AccentColor};color:#ffffff; 
 a.more_notes_link { background-color:{color: Hover Color};}
 a.more_notes_link:active {margin-left:2px;margin-top:2px;}
 
+{block:ifManualLoadInfiniteScroll}
+a#next {padding:15px 100px 15px 100px;background-color:{AccentColor};color:{color:Hover Color};font-size:16px;font-weight:bold;text-transform:uppercase;border-radius:.5em;}
+a#next:hover {background-color:{color:Hover Color};color:{AccentColor};}
+{/block:ifManualLoadInfiniteScroll}
+
 {CustomCSS}    
 </style>
 
 <script src="http://static.tumblr.com/oeix02r/Vvknbrq1w/jquery.min.js"></script>
 <script src="http://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script>
-<script src="http://static.tumblr.com/6hsqxdt/vmwm2rb4g/infinitescrolling.js"></script>
+<script src="http://static.tumblr.com/oeix02r/rKYnca5md/infinitescroll.js"></script>
+{block:ifManualLoadInfiniteScroll}
+<script src="http://static.tumblr.com/oeix02r/pcInc8tyn/manualtrigger.js"></script> 
+{/block:ifManualLoadInfiniteScroll}
 
 <script>
 $(document).ready(function(){// hide #back-top first
@@ -184,12 +228,17 @@ $container.infinitescroll({
     itemSelector : "#post",
     navSelector : "div.navigation",
     nextSelector : "div.navigation a#next",
-    loadingImg : "https://portal.ehawaii.gov/assets/images/loading.gif",
-    loadingText : "Loading more post...",
-    donetext: "All post has been loaded.",
-    bufferPx : 40,
-    extraScrollPx: 150,
-    preload : false,
+    loading:{
+        img : "https://portal.ehawaii.gov/assets/images/loading.gif",
+        finishedMsg: "All post have been loaded.",
+        msgText : "Loading more post.",
+    },
+    maxPage: 10,
+    behavior: 'twitter'
+//    donetext: "All post has been loaded.",
+//    bufferPx : 40,
+//    extraScrollPx: 150,
+//    preload : false,
 },
 // trigger Masonry as a callback
 function( newElements ) {
@@ -199,9 +248,17 @@ function( newElements ) {
     $newElems.animate({ opacity: 1 });
     $container.masonry( 'appended', $newElems, true ); 
     });
-    });
+    }
+);
+{block:ifManualLoadInfiniteScroll}
+$(window).unbind('.infscr');
+$('a#next').click(function(){	
+	$(document).trigger('retrieve.infscr');return false;});
+	$(document).ajaxError(function(e,xhr,opt){if(xhr.status==404)$('a#next').remove();});
+{/block:ifManualLoadInfiniteScroll}
 });
 </script>
+
 <!-- EO SCRIPTS --> 
 </head>
 
@@ -210,7 +267,7 @@ function( newElements ) {
 <div id="non-sticky">
 {block:ShowAvatar}<a href="/"><img src="{PortraitURL-128}" alt="" class="user_avatar"></a>{/block:ShowAvatar}
 {block:ShowTitle}<h1><a href="{BlogURL}">{Title}</a></h1>{/block:ShowTitle}
-{block:ShowDescription}{Description}{block:ShowDescription}<br><br>
+{block:ShowDescription}<br>{Description}{block:ShowDescription}<br><br>
 
 <div id="menu_nonsticky">
     <ul id="menubar2">
@@ -241,7 +298,9 @@ function( newElements ) {
         {block:Link}
             <center>
                 <table cellpadding="" cellspacing="0" width="100%" bgcolor="{AccentColor}"><tr>
-                <td valign="middle" halign="center" width="70%" id="linkbox"><h1><center><a href="{URL}" class="link" {Target}>{block:Host}{Name} &#8594;{/block:Host}</a><br><font size="3">{Host}</font></h1></center></td>{block:Thumbnail}  
+                <td valign="middle" halign="center" width="70%" id="linkbox"><h1><center><a href="{URL}" class="link" {Target}>{block:Host}{Name} &#8594;{/block:Host}
+
+</a><br><font size="3">{Host}</font></h1></center></td>{block:Thumbnail}  
 <td valign="top" width="30%"><img src="{Thumbnail}" class="link_thumbnail"></td> {/block:Thumbnail}</tr>
                 </table>
             </center>
@@ -332,15 +391,25 @@ function( newElements ) {
 
             <div id="sharebuttons" style="width:20px">
             <a href="{Permalink}"><img src="http://static.tumblr.com/oeix02r/0XGn8ca5v/permalink.png" border="0" alt="Permalink"></a>
-            <a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={Permalink}&text={Title}', 'popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/napn8c83z/fb.png" border="0" alt="Share in Facebook"></a> 
-            <a href="mailto:?subject={Title}&body=Check out this post! {Permalink}"><img src="http://static.tumblr.com/oeix02r/0bun8c843/mail.png" border="0" alt="Share via E-mail"></a> 
-            <a target="popup" onclick="window.open('https://twitter.com/intent/tweet?original_referer={BlogURL}&text={Title}&url={ShortURL}&via={text:Twitter Username}','popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/D4Zn8c845/twitter.png" border="0" alt="Share in Twitter"></a>
+            <a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={Permalink}&text={Title}', 'popup', 'width=500,height=300'); return false"><img 
+
+src="http://static.tumblr.com/oeix02r/napn8c83z/fb.png" border="0" alt="Share in Facebook"></a> 
+            <a href="mailto:?subject={Title}&body=Check out this post! {Permalink}"><img src="http://static.tumblr.com/oeix02r/0bun8c843/mail.png" border="0" alt="Share via E-
+
+mail"></a> 
+            <a target="popup" onclick="window.open('https://twitter.com/intent/tweet?original_referer={BlogURL}&text={Title}&url={ShortURL}&via={text:Twitter Username}','popup', 
+
+'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/D4Zn8c845/twitter.png" border="0" alt="Share in Twitter"></a>
             </div>
             </li>{/block:IndexPage}
             {block:PermalinkPage}
             <li><a href="{Permalink}"><img src="http://static.tumblr.com/oeix02r/0XGn8ca5v/permalink.png" border="0" alt="Permalink"></a></li>
-            <li><a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={Permalink}&text={Title}', 'popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/napn8c83z/fb.png" border="0" alt="Share in Facebook"></a> </li>
-            <li><a target="popup" onclick="window.open('https://twitter.com/intent/tweet?original_referer={BlogURL}&text={Title}&url={ShortURL}&via={text:Twitter Username}','popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/D4Zn8c845/twitter.png" border="0" alt="Share in Twitter"></a></li>
+            <li><a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={Permalink}&text={Title}', 'popup', 'width=500,height=300'); return 
+
+false"><img src="http://static.tumblr.com/oeix02r/napn8c83z/fb.png" border="0" alt="Share in Facebook"></a> </li>
+            <li><a target="popup" onclick="window.open('https://twitter.com/intent/tweet?original_referer={BlogURL}&text={Title}&url={ShortURL}&via={text:Twitter 
+
+Username}','popup', 'width=500,height=300'); return false"><img src="http://static.tumblr.com/oeix02r/D4Zn8c845/twitter.png" border="0" alt="Share in Twitter"></a></li>
             {/block:PermalinkPage}
         </ul>
         <div id="notes">
@@ -353,7 +422,11 @@ function( newElements ) {
    	 
    	 <div id="notes_page" style="width:50%;">
    	   <center><ul class="tags">
-  	  {block:RebloggedFrom}<li>SOURCE: <a href="{ReblogParentURL}" {Target} title="Reblogged from {ReblogParentName}"><img src="{ReblogParentPortraitURL-24}" align="absmiddle" border="0"></a> &rarr; <a href="{ReblogRootURL}" {Target} title="Posted by {ReblogRootName}"><img src="{ReblogRootPortraitURL-24}" align="absmiddle" border="0"></a>{/block:RebloggedFrom}
+  	  {block:RebloggedFrom}<li>SOURCE: <a href="{ReblogParentURL}" {Target} title="Reblogged from {ReblogParentName}"><img src="{ReblogParentPortraitURL-24}" 
+
+align="absmiddle" border="0"></a> &rarr; <a href="{ReblogRootURL}" {Target} title="Posted by {ReblogRootName}"><img src="{ReblogRootPortraitURL-24}" align="absmiddle" 
+
+border="0"></a>{/block:RebloggedFrom}
   	   {block:Tags}<li><a href="{TagURL}" class="tag">#{Tag}</a></li>{/block:Tags}</ul></center>    <br>
    	    {block:PermalinkPagination} 
         {block:PreviousPost}
@@ -408,7 +481,35 @@ function( newElements ) {
    	 </center>
    	 {/block:Posts}
 
-{block:IndexPage}</div>{/block:IndexPage}
+{block:IndexPage}</div>
+
+   	 
+   	     <center>
+    <div class="navigation">
+        {block:Pagination}
+                
+                {block:PreviousPage}
+                <a href="{PreviousPage}" id="prev">Previous</a>
+                {/block:PreviousPage}
+                <!--{block:JumpPagination length="5"}
+                    {block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                    {/block:CurrentPage}
+                    {block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}-->
+                {block:NextPage}
+                <a href="{NextPage}" id="next">Load More Post</a>
+                {/block:NextPage}
+                
+        {/block:Pagination}
+        
+        
+
+    </div>
+    </center>
+
+{/block:IndexPage}
 </center>
 <div id="back-top" style="position:fixed;top:70%;right:50px;font-size:100px"><a href="#top"><span>&#8679;</span></a></div>
 
@@ -431,29 +532,11 @@ function( newElements ) {
 </header>
 
 
-    <center>
-    <div class="navigation">
-        {block:Pagination}
-                
-                {block:PreviousPage}
-                <a href="{PreviousPage}" id="prev">Previous</a>
-                {/block:PreviousPage}
-                {block:JumpPagination length="5"}
-                    {block:CurrentPage}
-                    <span class="current_page">{PageNumber}</span>
-                    {/block:CurrentPage}
-                    {block:JumpPage}
-                    <a class="jump_page" href="{URL}">{PageNumber}</a>
-                {/block:JumpPage}{/block:JumpPagination}
-                {block:NextPage}
-                <a href="{NextPage}" id="next">Next</a>
-                {/block:NextPage}
-                
-        {/block:Pagination}
-    </div>
-    </center>
 
-<table id="footer"><tr><td><center>&copy; {CopyrightYears} <a href="/">{Title}</a> | Theme by <a href="http://superayielle.tumblr.com" target="_blank">Super Ayielle</a> | Powered by <a href="http://www.tumblr.com" target="_blank">Tumblr</a></center></td></tr></table>
+
+<table id="footer"><tr><td><center>&copy; {CopyrightYears} <a href="/">{Title}</a> | Theme by <a href="http://superayielle.tumblr.com" target="_blank">Super Ayielle</a> | 
+
+Powered by <a href="http://www.tumblr.com" target="_blank">Tumblr</a></center></td></tr></table>
 
         {block:IfGoogleAnalyticsID}
             <script>
